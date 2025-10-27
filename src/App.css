@@ -1,12 +1,30 @@
 .wrapper {
- display: flex;
- justify-content: center;
- flex-direction: column;
- margin: 0 200px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: 20px 200px;
 }
 .detail {
   display: flex;
-  div {
+  >div {
     flex: 1;
   }
+}
+.imageGalleryWrapper {
+  display: flex;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+.shortCutWrapper{
+  display: flex;
+  flex-direction: column;
+}
+.shortcut{
+  width: 70px;
+  height: 70px;
+  margin: 10px 30px 10px 0px;
+  cursor: pointer;
+}
+.shortcut:first-child {
+  margin-top: 0;
 }
