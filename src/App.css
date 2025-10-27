@@ -28,3 +28,31 @@
 .shortcut:first-child {
   margin-top: 0;
 }
+.introductionTitle{
+  font-weight: bold;
+  margin-top: 10px;
+}
+.price{
+  font-size: 14px;
+  color: #d2001e;
+  line-height: 1;
+  font-weight: 500;
+  margin-top: 20px;
+}
+.deadline{
+  font-size: 12px;
+  margin-top: 5px;
+}
+.sizeButton {
+  border-color: #f5f5f5 !important;
+  background: #f5f5f5 !important;
+  border-radius: 0 !important;
+  color: black !important;
+  margin: 10px 0;
+}
+.sizeButton:first-child{
+  margin-right: 10px;
+}
+.introductionNumber {
+  margin-bottom: 10px;
+}
