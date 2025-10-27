@@ -1,15 +1,22 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import ImageGallery from './components/ImageGallery'
+import Introduction from './components/Introduction'
+import Comment from './components/Comment'
+import ImageWall from './components/ImageWall'
+
+
 import './App.css'
-import { Select, Space } from 'antd';
 
 function App() {
 
   return (
-    <>
-    <img class = src='src/assets/20250620_190403_033724_____01-4_____1200x1842.webp'></img>
-    </>
+      <div className='wrapper'>
+        <div className='detail'>
+          <ImageGallery />
+          <Introduction />
+        </div>
+        <div className='comment'><Comment /></div>
+        <div className='imageWall'><ImageWall /></div>
+      </div>
   )
 }
 
