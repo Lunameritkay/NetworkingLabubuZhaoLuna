@@ -2,7 +2,8 @@ import ImageGallery from './components/ImageGallery'
 import Introduction from './components/Introduction'
 import Comment from './components/Comment'
 import ImageWall from './components/ImageWall'
-
+import { useLabubu } from 'react';
+import { labubuList } from './data.js';
 
 import './App.css'
 
