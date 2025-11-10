@@ -3,7 +3,7 @@ import Introduction from './components/Introduction'
 import Comment from './components/Comment'
 import ImageWall from './components/ImageWall'
 import { useLabubu } from 'react';
-import { labubuList } from './data.js';
+
 
 import './App.css'
 
@@ -11,6 +11,9 @@ function App() {
 
   return (
       <div className='wrapper'>
+        <div className='title'>
+          Labubu Zhao Luna
+        </div>
         <div className='detail'>
           <ImageGallery />
           <Introduction />
