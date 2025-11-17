@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Radio, Tag, Button } from 'antd';
+import { Radio, Tag, Button, Modal, Image } from 'antd';
 import '../App.css'
 
 function Introduction () {
@@ -12,6 +12,32 @@ function Introduction () {
       setCount(count - 1);
     }
   };
+
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const showModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const handleOk = () => {
+    setIsModalOpen(false);
+  };
+
+  const handleCancel = () => {
+    setIsModalOpen(false);
+  };
+
+  const pictures = [{
+    src: "src/assets/20250422_091913_284240____6_____1200x1200.jpg"
+  }, {
+    src: "src/assets/20250422_091913_427360____3_____1200x1200.jpg"
+  }, {
+    src: "src/assets/20250422_091913_429614____7_____1200x1200.jpg"
+  }, {
+    src: "src/assets/20250422_091913_592227____4_____1200x1200.jpg"
+  }, {
+    src: "src/assets/20250422_091913_967169____5_____1200x1200.jpg"
+  }]
 
   return (
     <div>
@@ -46,9 +72,24 @@ function Introduction () {
           </button>
         </div>
       </div>
-      <Button color="default" variant="solid">
+      <Button color="default" variant="solid" onClick={showModal}>
         再入荷を通知
       </Button>
+      <Modal
+        title="購入結果"
+        closable={{ 'aria-label': 'Custom Close Button' }}
+        open={isModalOpen}
+        onOk={handleOk}
+        onCancel={handleCancel}
+        style={{display: 'flex', justifyContent: 'center'}}
+      >
+        <Image
+          width={300}
+          height={300}
+          preview={false}
+          src={pictures[Math.floor(Math.random() * 5)].src}
+        />
+      </Modal>
     </div>
   )
 }

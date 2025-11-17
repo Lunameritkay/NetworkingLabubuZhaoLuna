@@ -32,8 +32,8 @@ function ImageGallery () {
         ))}
       </div>
         <Image
-          width={400}
-          preview={false}
+          width={300}
+          height={300}
           src={pictures[index].src}
         />
     </div>

@@ -6,7 +6,7 @@ function Comment () {
   const [comments, setComments] = useState( [{name: '2025/11/01', content: 'bbb'}, {name: '2025/11/03', content: 'ddd'}])
   const [value, setValue] = useState('')
   
-  const handleClick = (e) => {
+  const handleClick = () => {
     setComments([...comments, {name: new Date().getFullYear() + '/' + (new Date().getMonth() + 1 )+ '/' + new Date().getDate(), content: value}])
     setValue('')
   }
@@ -16,7 +16,7 @@ function Comment () {
    return (
     <>
       <Input value={value} onChange={handleChange}/>
-      <Button onClick={handleClick} color="purple" variant="solid">Submit</Button>
+      <Button style={{marginTop: '20px'}} onClick={handleClick} color="purple" variant="solid">Submit</Button>
     <div>{comments.map(comment => 
       (
       <><p>user: {comment.name}</p>

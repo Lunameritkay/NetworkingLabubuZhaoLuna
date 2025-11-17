@@ -2,8 +2,6 @@ import ImageGallery from './components/ImageGallery'
 import Introduction from './components/Introduction'
 import Comment from './components/Comment'
 import ImageWall from './components/ImageWall'
-import { useLabubu } from 'react';
-
 
 import './App.css'
 
@@ -14,7 +12,7 @@ function App() {
         <div className='title'>
           Labubu Zhao Luna
         </div>
-        <div className='detail'>
+        <div className='detail' style={{marginTop: '20px'}}>
           <ImageGallery />
           <Introduction />
         </div>
